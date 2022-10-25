@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+/*===============NAVBAR=========*/
+.navbar-brand:hover{
+    color: orange;
+    transition: 0.3 ease-in;
+}
+.navbar-nav .nav-link:hover{
+    color: orange;
+}
+/*==========END NAVBAR ======= */
+/* ========= HEADER SECTION =============== */
+#header__list{
+    display: inline-block; 
+}
+#header__list a{
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 30px;
+    padding-top: 40px;
+    font-size: 1.1rem;
+}
+#header__list a:hover{
+    color: orange;
+}
+/* ========= END HEADER SECTION =============== */
+/* ============ IMG SLILDER ==============*/
+.slider__image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+    background-image: url(img_slider/slika1.jpg);
+    background-position: center center;
+    background-size: cover;
+    transition: .4s ease;
+}
+
+.slider__image:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -1; /* ovo ode mi ne radi */
+}
+.container{
+    position: relative;
+    width: 70vh;
+    height: 70vh;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .2), 0 3px 6px rgba(0, 0, 0, .3) ;
+    overflow: hidden;
+}
+.slider__image .slide{
+    opacity: 0;
+    width: 100vw;
+    height: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+    top: -15vh;
+    left: -15vw;
+    transition: .4s ease;
+    z-index: 1;
+}
+.slide.active{
+  opacity: 1;  
+}
+.arrow{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    position: fixed;
+    top: 50%;
+}
+
+.left-arrow{
+   left: calc(15vw - 65px); 
+}
+.right-arrow{
+    right: calc(15vw - 65px); 
+ }
